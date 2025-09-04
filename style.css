@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(90deg, #0f172a, #1e293b);
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center all children */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  user-select: none;
+  padding: 0 20px;
+  position: fixed;
+}
+
+.navbar h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  pointer-events: none; /* so clicks pass through */
+}
+
+.navbar > div {
+  margin-left: auto;
+  position: relative; /* normal flow so logout stays on right */
+  z-index: 1;
+}
+
+.logout-btn {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body {
+  
+  background-color: #f0f2f5;
+  padding-top: 60px; /* Leave space for navbar */
+}
+
+#main_body{
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar, .middle-block, .right-block {
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #1f2937;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.sidebar input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.well-name {
+  margin-bottom: 15px;
+  padding: 12px;
+  background-color: #374151;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.well-name:hover {
+  background-color: #4b5563;
+}
+
+.middle-block {
+  flex: 3;
+  background-color: #e5e7eb;
+  padding: 0;
+}
+#map {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.right-block {
+  flex: 2;
+  background-color: white;
+  padding: 40px;
+  border-left: 1px solid #ccc;
+}
+
+.well-details h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.well-details p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.placeholder {
+  color: #777;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#well_details_section {
+  font-size: larger;
+}
+.dataTables_filter {
+  float: left;
+  padding: 10px;
+  display: block !important;
+}
+.download-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+#map-container {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden; /* Prevent map from spilling out */
+}
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+/* Cesium widget styling fix */
+.cesium-viewer {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}

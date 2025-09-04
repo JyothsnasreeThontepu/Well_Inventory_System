@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Andhra Pradesh Wells</title>
+  <link rel="stylesheet" href="leaflet/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="datatables/datatables.min.css" />
+
+</head>
+<body>
+  <!-- Navbar -->
+ <!-- Inside your navbar -->
+<div class="navbar">
+  <h1>WELL INVENTORY SYSTEM</h1>
+  <div><a href="/logout" class="logout-btn">Logout</a></div>
+</div>
+  <div id="main_body" style="padding-top: 1rem;">
+     <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Available Wells</h2>
+    
+<table id="wellsTable" class="display">
+  <thead>
+    <tr><th>Well Name</th></tr>
+  </thead>
+  <tbody id="wellsTableBody">
+    <!-- JS will populate rows -->
+  </tbody>
+</table>
+  </div>
+
+  <!-- Middle Block -->
+  <div class="middle-block">
+    <div id="map"></div>
+  </div>
+
+  <!-- Right Block -->
+  <div class="right-block">
+    <div id="wellDetails">
+    <p class="placeholder">Select a well to view its details and location.</p>
+    <button id="downloadBtn" class="download-btn">Download PDF</button>
+  </div>
+  </div>
+  </div>
+ 
+  
+<script src="jquery/jquery.min.js"></script>
+<script src="datatables/datatables.min.js"></script>
+<script src="leaflet/leaflet.js"></script>
+<script src="js/jspdf.umd.min.js"></script>
+<script src="js/jspdf.plugin.autotable.min.js"></script>
+<script src="script.js"></script>
+<script>
+  // Prevent back button using history manipulation
+  history.pushState(null, null, location.href);
+  window.onpopstate = function () {
+    history.pushState(null, null, location.href);
+  };
+
+  // Optional: disable backspace and Alt+Left navigation
+  window.addEventListener("keydown", function (e) {
+    if (
+      (e.key === "Backspace" && !["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) ||
+      (e.altKey && e.key === "ArrowLeft")
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
+</body>
+</html>
