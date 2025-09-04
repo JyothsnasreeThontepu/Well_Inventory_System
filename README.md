@@ -97,3 +97,10 @@ well-inventory-system/
 * ✅ Sync with central database when online
 * ✅ Add support for mobile/tablet offline PWA
 * ✅ Advanced GIS analysis with Leaflet plugins
+## Screenshots
+<img width="844" height="379" alt="Screenshot 2025-09-04 215318" src="https://github.com/user-attachments/assets/8b8a9b5f-e76a-4c22-8a93-0fe7cb57ba42" />
+<img width="840" height="380" alt="image" src="https://github.com/user-attachments/assets/489cc62a-74be-43f4-8a80-9225105ef399" />
+<img width="755" height="508" alt="image" src="https://github.com/user-attachments/assets/1630a943-01f1-4f55-abea-b047ba721b2b" />
+
+
+
